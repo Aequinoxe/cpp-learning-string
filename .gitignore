@@ -1,0 +1,25 @@
+# Build results
+Debug/
+Release/
+x64/
+x86/
+build/
+out/
+
+# Visual Studio
+.vs/
+*.vcxproj*
+*.sln
+
+# Compiled binaries
+*.obj
+*.exe
+*.dll
+*.lib
+*.pdb
+
+# Other
+*.log
+*.tmp
+*.user
+*.cache
