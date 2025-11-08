@@ -1,11 +1,11 @@
-#pragma once
+﻿#pragma once
 
 class String
 {
 private:
 
 	char* array;
-	int size;
+	int size;	
 
 public:
 
