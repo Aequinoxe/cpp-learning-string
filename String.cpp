@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include "String.h"
 #include <stdexcept>
 
@@ -205,32 +205,7 @@ bool String::operator==(const char* rightOperator) const
 
 bool String::operator!=(const char* rightOperator) const
 {
-	if (!rightOperator)
-	{
-		return size != 0;
-	}
-	
-	int length = 0;
-	
-	while (rightOperator[length] != '\0')
-	{
-		length++;
-	}
-
-	if (length != size)
-	{
-		return true;
-	}
-
-	for (int i = 0; i < length; i++)
-	{
-		if (array[i] != rightOperator[i])
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return !(*this == rightOperator);
 }
 
 bool String::operator==(const String& rightOperator) const
@@ -253,20 +228,7 @@ bool String::operator==(const String& rightOperator) const
 
 bool String::operator!=(const String& rightOperator) const
 {
-	if (size != rightOperator.size)
-	{
-		return true;
-	}
-
-	for (int i = 0; i < size; i++)
-	{
-		if (array[i] != rightOperator[i])
-		{
-			return true;
-		}
-	}
-
-	return false;
+	return !(*this == rightOperator);
 }
 
 char& String::operator[](int index)
